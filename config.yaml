@@ -1,0 +1,7 @@
+database:
+  host: localhost
+  username: postgres
+  password: postgres
+  port: 5432
+  db_name: toolbook
+  debug: false
