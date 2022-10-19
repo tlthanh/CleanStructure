@@ -3,5 +3,5 @@ database:
   username: postgres
   password: postgres
   port: 5432
-  db_name: toolbook
+  db_name: simple
   debug: false

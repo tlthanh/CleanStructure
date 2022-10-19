@@ -1,6 +1,8 @@
 package router
 
 import (
+	"core/internal/handler"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/monitor"
@@ -23,11 +25,12 @@ func Setup() {
 	// go handler.ScanAllNotification()
 
 	setupRouter(app)
-	app.Listen(":4444")
+	app.Listen(":5444")
 }
 
 func setupRouter(fiber_app *fiber.App) {
-	// admin := fiber_app.Group("/admin", logger.New())
+	api := fiber_app.Group("/admin")
+	api.Get("/apis.json", handler.GetApis)
 	// admin.Post("/register.json", handler.CreateUser)
 
 }
